@@ -1,0 +1,32 @@
+[build]
+target = "index.html"
+dist = "dist"
+# 发布模式下自动压缩
+release = true
+
+# JS 压缩配置
+[tools.wasm-bindgen]
+version = "0.2.87"
+
+# CSS 压缩配置
+[tools.stylesheets]
+minify = true
+
+# 监视文件变化
+[watch]
+watch = ["src", "styles.css", "index.html"]
+
+# 发布模式的具体配置
+[serve]
+# 启用压缩
+compress = true
+
+# 额外的优化配置
+[clean]
+dist = "dist"
+
+# 自定义构建命令
+[[hooks]]
+stage = "build"
+command = "sh"
+command_arguments = ["-c", "echo 'Building in release mode...'"] 

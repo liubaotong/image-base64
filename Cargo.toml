@@ -1,0 +1,23 @@
+[package]
+name = "common_tools"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+yew = { version = "0.21", features = ["csr"] }
+base64 = "0.21"
+web-sys = { version = "0.3", features = [
+    "File", 
+    "FileList", 
+    "HtmlInputElement",
+    "Window", 
+    "Navigator", 
+    "Clipboard",
+    "HtmlImageElement",
+    "EventTarget"
+]}
+gloo = { version = "0.10", features = ["file", "timers", "futures"] }
+wasm-bindgen = "0.2"
+js-sys = "0.3"
+wasm-bindgen-futures = "0.4"
+gloo-timers = { version = "0.3", features = ["futures"] }
